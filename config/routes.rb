@@ -6,6 +6,7 @@ Rails.application.routes.draw do
   get "up" => "rails/health#show", as: :rails_health_check
   namespace :api do
       resources :users, only: [ :create, :show, :update, :destroy, :index ]
+      resources :contacts, only: [ :create, :show, :update, :destroy, :index ]
   end
   # Defines the root path route ("/")
   # root "posts#index"
